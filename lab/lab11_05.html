@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+
+</head>
+<body>
+<h2>자동차 객체 만들기</h2> <hr>
+    <script>
+        var my_car = new Object() ;
+        my_car.maker = "Hyundai" ;
+        my_car.model = "Grandeur" ;
+        my_car["price"] = 3000 ;
+        my_car.speed = 0
+
+        my_car.accelaerate = function () {
+            my_car.speed += 10 ;
+        }
+        my_car.stop = function () {
+            my_car['speed'] = 0 ;
+        }
+
+        document.write('<p> 제조사 : ' +my_car['maker'] + '</p>');
+        document.write('<p> 가격 : ' + my_car.price + '</p>') ;
+        document.write(my_car) ;
+
+        console.log(my_car) ;
+
+        var company = {
+            name: 'Microsoft',
+            ceo : {
+                name: 'Bill Gates',
+                fav_color: 'blue'
+            },
+            stock_of_company : 110
+        };
+
+        document.write('<p>업체 이동: ' + company.name + '</p>');
+        document.write('<p>주식보유량: ' + company.stock_of_company + '</p>');
+        document.write('<p> ceo 이동 : ' + company['ceo'].name) ;
+
+        console.log(company)
+
+    </script>
+</body>
+</html>
