@@ -15,4 +15,11 @@ document.addEventListener("DOMContentLoaded",
          }
 
         }
+        document.querySelector("button").addEventListener("click", say_hello);
+        //document.querySelector("button").onclick = say_hello ;
+        document.querySelector("body").addEventListener("mousemove",
+            function (event ) {
+            if (event.shiftKey === true)
+                concole.log("mouse position (x, y) : " + event.clientx + ", " + evet.clienty + ")");
+            });
     })
